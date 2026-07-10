@@ -115,7 +115,7 @@ echo "Redirected logs to: $LOGDIR/${{SLURM_JOB_NAME}}_${{SLURM_ARRAY_JOB_ID}}_${
 module load miniforge/24.3.0-0
 set +u
 eval "$(conda shell.bash hook)"
-conda activate RTE
+conda activate {conda_env}
 set -u
 
 # --- Gurobi init + activate, SPECIFIC TO MIT ENGAGING CLUSTER---
